@@ -10,7 +10,7 @@ from [dbo].[Sheet1$]
 order by location, date
 
 
--- Not selecting the continents (with null continent values) from the location column, since we are only interested in working with the countries
+-- Excluding the continents (with null continent values) from the location column, since we are only interested in working with the countries
 select continent, location, date, population, new_cases, total_cases, new_deaths, total_deaths, people_vaccinated, total_vaccinations
 from [dbo].[Sheet1$]
 where continent is not null
